@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:src="@drawable/notifybadge"
+        android:layout_width="48dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.nex3z.notificationbadge.NotificationBadge
+        android:id="@+id/badge"
+        android:layout_toRightOf="@id/icon"
+        android:layout_alignTop="@id/icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="-22dp"
+        android:layout_marginTop="10dp"
+        app:nbBackground="@drawable/badge_bg_with_shadow"
+        app:nbMaxTextLength="2"/>
+
+    <Button
+        android:id="@+id/btnIncrease"
+        android:text="Increase"
+        android:layout_below="@id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnMany"
+        android:text="Many"
+        android:layout_below="@id/btnIncrease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:text="Clear"
+        android:layout_below="@id/btnMany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
